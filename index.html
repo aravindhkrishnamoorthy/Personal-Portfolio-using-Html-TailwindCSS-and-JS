@@ -1,827 +1,230 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./output.css">
-    <title>Portfolio - Araindh</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aravindh K | Python Full Stack Developer</title>
+  <meta name="description" content="Aravindh K is a Python full stack developer building Django REST APIs and React front ends. View projects, skills and resume.">
+  <link rel="canonical" href="https://aravindhkrishnamoorthy.github.io/Personal-Portfolio-using-Html-TailwindCSS-and-JS/">
+  <meta name="theme-color" content="#f5f6f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1311" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aravindh K | Python Full Stack Developer">
+  <meta property="og:description" content="Django REST APIs and the React apps that use them. Projects, skills and resume.">
+  <meta property="og:url" content="https://aravindhkrishnamoorthy.github.io/Personal-Portfolio-using-Html-TailwindCSS-and-JS/">
+  <meta property="og:image" content="https://aravindhkrishnamoorthy.github.io/Personal-Portfolio-using-Html-TailwindCSS-and-JS/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aravindh K, Python Full Stack Developer">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap">
+  <link rel="stylesheet" href="./output.css">
+  <script>
+    // Apply a saved theme before first paint. With none saved, CSS follows the system setting.
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
+    } catch {}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aravindh K",
+    "jobTitle": "Python Full Stack Developer",
+    "url": "https://aravindhkrishnamoorthy.github.io/Personal-Portfolio-using-Html-TailwindCSS-and-JS/",
+    "sameAs": ["https://github.com/aravindhkrishnamoorthy", "https://www.linkedin.com/in/aravindhkjk/"],
+    "alumniOf": "Sri Sairam Engineering College",
+    "knowsAbout": ["Python", "Django", "Django REST Framework", "React", "MySQL"]
+  }
+  </script>
 </head>
-<body class="overflow-x-hidden">
+<body>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-on-accent">Skip to content</a>
 
-    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
-        <img src="./images/header-bg-color.png" alt="header-bg-iocn">
+  <svg class="hidden" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 2.9.8.1-.7.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+    <symbol id="i-theme" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="currentColor" d="M12 3a9 9 0 0 1 0 18z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+  </svg>
+
+  <header class="sticky top-0 z-40 border-b border-line bg-bg">
+    <div class="shell flex h-16 items-center justify-between gap-4">
+      <a href="#top" class="inline-flex min-h-11 items-center font-display text-xl font-bold tracking-tight">Aravindh<span class="text-accent">.K</span></a>
+      <nav aria-label="Main" class="hidden gap-7 md:flex">
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" type="button" class="icon-btn" aria-label="Switch theme"><svg class="icon" aria-hidden="true"><use href="#i-theme"/></svg></button>
+        <a href="./assets/aravindh-k-resume.pdf" target="_blank" rel="noopener" class="btn btn-primary max-lg:hidden">Resume</a>
+        <button id="menuToggle" type="button" class="icon-btn md:hidden" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
     </div>
-    <nav class="w-full fixed px-5 lg:px-4 xl:px-[8%] py-4 flex items-center justify-between z-50 h-16">
-        
-        <p class="text-3xl cursor-pointer mr-6">Aravindh<span>.K</span></p>
-        
-        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white 
-                shadow-sm bg-opacity-50">
-            <li class="hover:scale-105 cursor-pointer transition duration-200">
-                <a href="#home">Home</a>
-            </li>
-            <li class="hover:scale-105 cursor-pointer transition duration-200">
-                <a href="#education">Education</a>
-            </li>
-            <li class="hover:scale-105 cursor-pointer transition duration-200">
-                <a href="#technology">Technology</a>
-            </li>
-            <li class="hover:scale-105 cursor-pointer transition duration-200">
-                <a href="#certifications">Certifications</a>
-            </li>
-            <li class="hover:scale-105 cursor-pointer transition duration-200">
-                <a href="#projects">Projects</a>
-            </li>
-        </ul>
-
-        <div class="flex gap-6 items-center">
-            <!-- <button><img src="./images/moon_icon.png" alt="moon-icon" 
-                    class="w-6">
-            </button> -->
-            <p class="border rounded-full px-5 py-3 border-white hidden lg:block shadow
-                     font-semibold  lg:hover:scale-105 transition bg-clip-text text-transparent
-                     bg-linear-to-r from-gray-700 via-gray-400 to-slate-800
-                     hover:from-blue-600 hover:via-purple-600 hover:to-pink-600
-                    ">
-                Full Stack Developer
-            </p>
-            <button class="block md:hidden ml-3 cursor-pointer" onclick="openMenu()">
-                <img src="./images/./menu-black.png" alt="" class="w-6">
-            </button>
-        </div>
-
-        <!-- Mobile view menu bar -->
-        <ul id="sideMenu" 
-            class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 
-            h-screen bg-rose-50 transition duration-500
-        ">
-            <div class="absolute top-6 right-6 cursor-pointer" onclick="closeMenu()">
-                <img src="./images/close-black.png" alt="Closing menu image" class="w-6">
-            </div>
-            <li class="bg-gray-300 text-center py-1 rounded-xl" 
-                onclick="closeMenu()">
-                <a href="#home">Home</a>
-            </li>
-            <li class="bg-gray-300 text-center py-1 rounded-xl"
-                onclick="closeMenu()">
-                <a href="#education">Education</a>
-            </li>
-            <li class="bg-gray-300 text-center py-1 rounded-xl"
-                onclick="closeMenu()">
-                <a href="#technology">Technology</a>
-            </li>
-            <li class="bg-gray-300 text-center py-1 rounded-xl"
-                onclick="closeMenu()">
-                <a href="#certifications">Certifications</a>
-            </li>
-            <li class="bg-gray-300 text-center py-1 rounded-xl"
-                onclick="closeMenu()">
-                <a href="#projects" >Projects</a>
-            </li>
-        </ul>
+    <nav id="mobileMenu" aria-label="Mobile" class="absolute inset-x-0 top-full border-b border-line bg-surface shadow-lg md:hidden" hidden>
+      <div class="shell pb-4">
+        <a class="sheet-link" href="#projects">Projects</a>
+        <a class="sheet-link" href="#skills">Skills</a>
+        <a class="sheet-link" href="#about">About</a>
+        <a class="sheet-link" href="#contact">Contact</a>
+        <a class="sheet-link" href="./assets/aravindh-k-resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      </div>
     </nav>
+  </header>
 
-    <!-- header section and home section -->
-    <div id="home" class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center 
-                justify-center gap-4 pt-15">
-        <img src="./images/profile-pic.png" alt="profile picture" class="rounded-full w-32 h-32 
-        bg-gray-200 object-contain">
-        <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3">
-            Hi! I am Aravindh K
-            <img src="./images/hand-icon.png" alt="hand-icon" class="w-6">
-        </h3>
-        <h1 class="text-3xl sm:text-6xl lg:text-[66px]">
-            Full Stack Developer
-        </h1>
-        <p class="max-w-2xl mx-auto">
-            Full-stack developer proficient in React and Tailwind for front-end and Python, Django, 
-            and DRF for scalable back-end builds, Experienced with MySQL.
-        </p>
+  <main id="main" tabindex="-1" class="outline-none">
+    <section id="top" aria-labelledby="hero-title" class="py-8 md:py-16 lg:py-20">
+      <div class="shell grid grid-cols-[auto_1fr] gap-5 lg:grid-cols-[1.5fr_1fr] lg:gap-x-14">
+        <img src="./assets/aravindh-k.webp" alt="Portrait of Aravindh K" width="336" height="420" fetchpriority="high" class="h-auto w-20 rounded-2xl border border-line md:w-28 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:w-full lg:max-w-[336px] lg:justify-self-end lg:rounded-3xl">
+        <p class="self-center font-medium text-muted lg:col-start-1 lg:row-start-1 lg:self-end">Aravindh K<br class="lg:hidden"><span class="max-lg:hidden">, </span>Python full stack developer</p>
+        <div class="col-span-2 grid gap-5 lg:col-span-1 lg:col-start-1 lg:row-start-2 lg:self-start">
+          <h1 id="hero-title" class="text-[2rem] md:text-5xl lg:text-[3.25rem]">I build <span class="text-accent">Django REST APIs</span> and the React apps that use them.</h1>
+          <p class="max-w-[58ch] text-lg text-muted">I'm a B.Tech IT graduate looking for an entry-level developer role. My projects cover JWT authentication, per-user data access and MySQL-backed apps.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#projects" class="btn btn-primary">See my projects</a>
+            <a href="./assets/aravindh-k-resume.pdf" target="_blank" rel="noopener" class="btn">Resume (PDF)</a>
+          </div>
+          <div class="flex gap-2">
+            <a class="icon-btn" href="https://github.com/aravindhkrishnamoorthy" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a>
+            <a class="icon-btn" href="https://www.linkedin.com/in/aravindhkjk/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+            <a class="icon-btn" href="mailto:aravindhjk2001@gmail.com" aria-label="Email Aravindh"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="flex gap-5 items-center justify-between mt-4">
-            <a href="https://www.linkedin.com/in/aravindhkjk/" target="_blank">
-                <img src="./images/LinkedIn_logo.png.webp" alt="linkedIn-logo" class="w-6 
-                hover:scale-115 transition duration-300">
-            </a>
-            <a href="https://github.com/aravindhkrishnamoorthy" target="_blank">
-                <img src="./images/github-logo.png" alt="github-logo" class="w-6 
-                hover:scale-115 transition duration-300">
-            </a>
-            <a href="mailto:aravindhjk2001@gmail.com" target="_blank">
-                <img src="./images/gmail-logo.png" alt="gmail-logo" class="w-6 
-                hover:scale-115 transition duration-300">
-            </a>
+    <section id="projects" aria-labelledby="projects-title" class="section">
+      <div class="shell grid gap-7">
+        <div class="grid gap-2">
+          <h2 id="projects-title" class="section-title">Featured projects</h2>
+          <p class="max-w-[62ch] text-muted">Each panel shows the API calls the project makes.</p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2">
+
+          <article class="card flex min-w-0 flex-col overflow-hidden">
+            <ol class="trace" aria-label="API calls in the Notes Management System">
+              <li><code>POST /api/token/</code><b>200</b><small>30-minute access token, 1-day refresh token</small></li>
+              <li><code>GET /api/notes/</code><b>200</b><small>only notes written by the signed-in user</small></li>
+              <li><code>DELETE /api/notes/delete/7/</code><b>204</b><small>works only on your own notes</small></li>
+            </ol>
+            <div class="flex grow flex-col gap-4 p-5 lg:p-6">
+              <h3 class="text-xl">Notes Management System</h3>
+              <p class="text-muted">A private notes app. Users register, sign in, and create, read and delete notes that other users can't see.</p>
+              <ul class="grid list-disc gap-1.5 pl-5 text-[15px]">
+                <li>The server filters notes by the signed-in user, so requesting another person's note ID returns nothing</li>
+                <li>Protected React routes check token expiry and request a new token before rendering</li>
+                <li>Django REST Framework API with a MySQL database</li>
+              </ul>
+              <div class="flex flex-wrap gap-1.5"><span class="tag">React</span><span class="tag">Tailwind</span><span class="tag">DRF</span><span class="tag">Simple JWT</span><span class="tag">MySQL</span></div>
+              <div class="mt-auto pt-1"><a class="btn" target="_blank" rel="noopener" href="https://github.com/aravindhkrishnamoorthy/Notes-Management-System-using-React-DRF-Python-and-MySQL" aria-label="View code for Notes Management System"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>View code</a></div>
+            </div>
+          </article>
+
+          <article class="card flex min-w-0 flex-col overflow-hidden">
+            <ol class="trace" aria-label="API calls in the Secure Authentication Portal">
+              <li><code>GET /protected_view/</code><span class="bad">401</span><small>access token has expired</small></li>
+              <li><code>POST /token/refresh/</code><b>200</b><small>interceptor gets a new access token</small></li>
+              <li><code>GET /protected_view/</code><b>200</b><small>original request is retried</small></li>
+            </ol>
+            <div class="flex grow flex-col gap-4 p-5 lg:p-6">
+              <h3 class="text-xl">Secure Authentication Portal</h3>
+              <p class="text-muted">A registration and login portal that renews an expired access token without asking the user to sign in again.</p>
+              <ul class="grid list-disc gap-1.5 pl-5 text-[15px]">
+                <li>Axios interceptors attach the token, catch a 401, refresh the token and retry the request</li>
+                <li>Private and public React routes driven by a shared auth context</li>
+                <li>Secret key and debug setting are read from configuration, not written in the code</li>
+              </ul>
+              <div class="flex flex-wrap gap-1.5"><span class="tag">React</span><span class="tag">Tailwind</span><span class="tag">DRF</span><span class="tag">Simple JWT</span><span class="tag">Axios</span></div>
+              <div class="mt-auto pt-1"><a class="btn" target="_blank" rel="noopener" href="https://github.com/aravindhkrishnamoorthy/Secure-Authentication-Portal-using-React-TailwindCSS-DRF-and-Python" aria-label="View code for Secure Authentication Portal"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>View code</a></div>
+            </div>
+          </article>
         </div>
 
-        <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
-            <p class="border  py-3 px-6 rounded-full flex items-center gap-2 border-gray-400
-                hover:scale-105 transition duration-500 hover:border-gray-500
-            ">
-                <img src="./images/phone-call-icon.png" alt="phone call icon" class="w-4">
-                +91 9543189262
-            </p>
-            <a href="images\ARAVINDH K_Resume.pdf" download 
-                class="border py-3 px-10 rounded-full flex items-center gap-2 border-gray-400
-                hover:scale-105 transition duration-500 hover:border-gray-500"
-            >
-                My Resume
-                <img src="images\download-icon.png" alt="download-icon" class="w-4">
-            </a>
+        <h3 class="mt-4 text-xl">More projects</h3>
+        <ul class="card project-list">
+          <li><div><p class="font-semibold">Blog Website</p><p class="text-sm text-muted">Django, Bootstrap. Posts, categories and a dashboard</p></div><a class="text-link" target="_blank" rel="noopener" aria-label="Code for Blog Website" href="https://github.com/aravindhkrishnamoorthy/Blog-Website-using-HTML-Bootstrap-Django-Python-and-MySQL">Code</a></li>
+          <li><div><p class="font-semibold">Book Collection Management</p><p class="text-sm text-muted">Django, MySQL. Add, search, update and delete</p></div><a class="text-link" target="_blank" rel="noopener" aria-label="Code for Book Collection Management" href="https://github.com/aravindhkrishnamoorthy/Book-Collection-Management-using-HTML-CSS-Python-and-Django">Code</a></li>
+          <li><div><p class="font-semibold">Todo List Management</p><p class="text-sm text-muted">Django, Bootstrap. Edit, complete and undo</p></div><a class="text-link" target="_blank" rel="noopener" aria-label="Code for Todo List Management" href="https://github.com/aravindhkrishnamoorthy/ToDo-List-using-HTML-CSS-Bootstrap-Python-and-Django">Code</a></li>
+          <li><div><p class="font-semibold">Simple Instagram Clone</p><p class="text-sm text-muted">React, Tailwind, json-server. Feed, stories and profile</p></div><a class="text-link" target="_blank" rel="noopener" aria-label="Code for Simple Instagram Clone" href="https://github.com/aravindhkrishnamoorthy/Simple-Instagram-Clone-using-React-and-TailwindCSS">Code</a></li>
+          <li><div><p class="font-semibold">Rock Paper Scissors</p><p class="text-sm text-muted">JavaScript. Autoplay and a saved score</p></div><a class="text-link" target="_blank" rel="noopener" aria-label="Code for Rock Paper Scissors" href="https://github.com/aravindhkrishnamoorthy/Rock-Paper-Scissors-using-Html-Css-and-Js">Code</a></li>
+          <li><div><p class="font-semibold">Guess the Number</p><p class="text-sm text-muted">JavaScript. Score and high score</p></div><a class="text-link" target="_blank" rel="noopener" aria-label="Code for Guess the Number" href="https://github.com/aravindhkrishnamoorthy/Guess-the-Number-Game-using-HTML-CSS-and-JS">Code</a></li>
+          <li><div><p class="font-semibold">Todo List Application</p><p class="text-sm text-muted">JavaScript. Tasks with due dates</p></div><a class="text-link" target="_blank" rel="noopener" aria-label="Code for Todo List Application" href="https://github.com/aravindhkrishnamoorthy/ToDo-List-Application-using-HTML-CSS-and-JS">Code</a></li>
+          <li><div><p class="font-semibold">Simple YouTube Clone</p><p class="text-sm text-muted">HTML, CSS. Page layout practice</p></div><a class="text-link" target="_blank" rel="noopener" aria-label="Code for Simple YouTube Clone" href="https://github.com/aravindhkrishnamoorthy/Youtube-Clone-using-HTML-and-CSS">Code</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-title" class="section">
+      <div class="shell grid gap-7">
+        <h2 id="skills-title" class="section-title">Skills</h2>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="grid content-start gap-3"><h3 class="label">Backend</h3><ul class="flex flex-wrap gap-2"><li class="skill">Python</li><li class="skill">Django</li><li class="skill">Django REST Framework</li><li class="skill">MySQL</li></ul></div>
+          <div class="grid content-start gap-3"><h3 class="label">Frontend</h3><ul class="flex flex-wrap gap-2"><li class="skill">React</li><li class="skill">JavaScript</li><li class="skill">Tailwind CSS</li><li class="skill">Bootstrap</li><li class="skill">HTML</li><li class="skill">CSS</li></ul></div>
+          <div class="grid content-start gap-3"><h3 class="label">Tools</h3><ul class="flex flex-wrap gap-2"><li class="skill">Git</li><li class="skill">GitHub</li><li class="skill">Postman</li><li class="skill">VS Code</li><li class="skill">MySQL Workbench</li></ul></div>
         </div>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title" class="section">
+      <div class="shell grid gap-8 md:grid-cols-2 lg:gap-14">
+        <div class="grid content-start gap-4">
+          <h2 id="about-title" class="section-title">About</h2>
+          <p class="max-w-[60ch] text-muted">I'm a Python full stack developer with a B.Tech in Information Technology. I hold a Python Full Stack certificate from Softlogic Institutions in Chennai, and my projects range from plain JavaScript pages to React apps backed by Django REST APIs.</p>
+          <p class="max-w-[60ch] text-muted">I'm looking for an entry-level role where I can contribute and keep growing as a developer.</p>
+        </div>
+        <div class="grid content-start gap-7">
+          <div class="grid gap-2"><h3 class="label">Education</h3>
+            <p class="font-semibold">B.Tech, Information Technology</p>
+            <p class="text-muted">Sri Sairam Engineering College, Chennai<br>2018 to 2022, 81%</p></div>
+          <div class="grid gap-2"><h3 class="label">Certifications</h3>
+            <ul class="grid gap-2">
+              <li><span class="font-semibold">Python Full Stack</span><br><span class="text-muted">Softlogic Institutions, Chennai</span></li>
+              <li><span class="font-semibold">HTML, CSS, and JavaScript for Web Developers</span><br><span class="text-muted">Coursera</span></li>
+              <li><span class="font-semibold">Python Course Completion</span><br><span class="text-muted">Skillrack</span></li>
+            </ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title" class="section">
+      <div class="shell">
+        <div class="card grid gap-5 p-6 md:p-10">
+          <h2 id="contact-title" class="section-title">Hiring for an entry-level role?</h2>
+          <p class="max-w-[58ch] text-muted">Email is the best way to reach me.</p>
+          <div class="flex flex-wrap items-center gap-3">
+            <a id="email" href="mailto:aravindhjk2001@gmail.com" class="text-link font-mono !font-medium break-all">aravindhjk2001@gmail.com</a>
+            <button id="copyEmail" type="button" class="btn" hidden>Copy email</button>
+            <span id="copyStatus" role="status" class="text-sm text-muted"></span>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a class="btn btn-primary" href="./assets/aravindh-k-resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+            <a class="btn" href="https://www.linkedin.com/in/aravindhkjk/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://github.com/aravindhkrishnamoorthy" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line py-5 text-sm text-muted">
+    <div class="shell flex flex-wrap items-center justify-between gap-x-3">
+      <p>&copy; 2026 Aravindh K</p>
+      <p>Built with HTML, Tailwind CSS and JavaScript. <a class="text-link" target="_blank" rel="noopener" href="https://github.com/aravindhkrishnamoorthy/Personal-Portfolio-using-Html-TailwindCSS-and-JS">View source</a></p>
     </div>
-
-    <!-- Education -->
-    <div id="education" class="px-5 lg:px-4 xl:px-[8%] py-5 text-[17px] scroll-mt-15">
-        <h1 class=" text-3xl lg:text-[40px] mb-8 flex items-center justify-center gap-2">Education
-            <img src="./images/edu-icon.png" alt="edu-icon" class="w-7.5 mt-2">
-        </h1>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ">
-            <div class="border rounded-4xl w-full px-8 py-5 hover:-translate-y-1 duration-500
-                border-gray-400 hover:bg-linear-to-tr from-blue-100 to-violet-100
-                hover:shadow-[2px_2px_0_#000]  transition
-            ">
-                <h2 class="font-semibold mb-2">Degree</h2>
-                <p class="text-gray-800 font-semibold">B.Tech IT</p>
-                <p class="text-gray-800">Sri Sairam Engineering College - Chennai</p>
-                <p class="text-gray-800">2018-2022</p>
-                <p class="font-semibold">81%</p>
-            </div>
-
-            <div class="border rounded-4xl w-full px-8 py-5 hover:-translate-y-1 duration-500
-                    border-gray-400 hover:bg-linear-to-tr from-slate-100 to-gray-200
-                    hover:shadow-[2px_2px_0_#000] transition">
-                <h2 class="font-semibold mb-2">School</h2>
-                <p class="text-gray-800 font-semibold">SEC</p>
-                <p class="text-gray-800">Chandra Hr Sec School - Sethiyathope</p>
-                <p class="text-gray-800">2017-2018</p>
-                <p class="font-semibold">81%</p>
-            </div>
-
-            <div class="border rounded-4xl w-full px-8 py-5 hover:-translate-y-1 duration-500 
-                sm:col-span-2 sm:mx-auto sm:max-w-sm lg:col-span-1 lg:mx-0 lg:max-w-none
-                border-gray-400 hover:bg-linear-to-tr from-violet-100 to-gray-100
-                hover:shadow-[2px_2px_0_#000] transition">
-                <h2 class="font-semibold mb-2">School</h2>
-                <p class="text-gray-800 font-semibold">SSLC</p>
-                <p class="text-gray-800">Chandra Hr Sec School - Sethiyathope</p>
-                <p class="text-gray-800">2015-2016</p>
-                <p class="font-semibold">93%</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Languages and tools -->
-    <div id="technology" class=" px-5 lg:px-4 xl:px-[8%] py-5 mt-10 w-full scroll-mt-15">
-
-        <h1 class="text-3xl lg:text-[40px] mb-8 flex items-center justify-center gap-2">Technology
-            <img src="./images/code-icon.png" alt="code-icon" class="w-8 mt-3">
-        </h1>
-
-        <!-- technology div -->
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 justify-between 
-                    mx-auto md:gap-3">
-            <!-- languages -->
-            <div class="border border-gray-400 rounded-2xl hover:scale-105 transition mx-auto
-                    duration-500 hover:bg-gray-100 hover:bg-linear-to-l from-gray-100 to-gray-200
-                    hover:shadow-[0px_0px_8px_#000] hover:border-gray-950">
-                <h2 class="text-center text-xl pt-5 pb-5">Languages</h2>
-                <div class="grid grid-cols-2  gap-4  px-5 py-3 justify-items-center mb-5 max-w-3xl
-                        md:grid-cols-3
-                ">
-                    <div class="border border-gray-400 p-3 rounded-lg hover:bg-orange-200
-                        hover:-translate-y-1 transition duration-500 hover:scale-105 
-                        hover:shadow-[4px_4px_0_#000] 
-                        hover:bg-linear-to-b from-orange-200 to-gray-200
-                    ">
-                        <img src="./images/html-icon.png" alt="html-icon" class="w-12">
-                        <p class="font-semibold">HTML 5</p>
-                    </div>
-                    <div class="border border-gray-400 p-4 rounded-lg 
-                        hover:bg-linear-to-b from-blue-200 to-gray-200
-                        hover:-translate-y-1 transition duration-500 hover:scale-105
-                        hover:shadow-[4px_4px_0_#000] hover:border-gray-700
-                    ">
-                        <img src="./images/css-icon.jpg" alt="css-icon" class="w-12">
-                        <p class="font-semibold">CSS 3</p>
-                    </div>
-                    <div class="border border-gray-400 p-1 rounded-lg 
-                        hover:bg-linear-to-b from-yellow-200 to-gray-200
-                        hover:-translate-y-1 transition duration-500 hover:scale-105
-                        hover:shadow-[4px_4px_0_#000] hover:border-gray-700
-                    "> 
-                        <img src="./images/javascript-icon.png.webp" alt="js-icon" class="w-16 h-15">
-                        <p class="font-semibold">Javascript</p>
-                    </div>
-                    <div class="border border-gray-400 p-3 rounded-lg 
-                        hover:bg-linear-to-b from-indigo-200 to-yellow-100
-                        hover:-translate-y-1 transition duration-500 hover:scale-105
-                        hover:shadow-[4px_4px_0_#000] hover:border-gray-700
-                    ">
-                        <img src="./images/python-icon.jpg" alt="py icon" class="w-12">
-                        <p class="font-semibold">Python</p>
-                    </div>
-                    <div class="border border-gray-400 p-3 rounded-lg 
-                        hover:bg-linear-to-b from-blue-100 to-orange-200
-                        hover:-translate-y-1 transition duration-500 hover:scale-105
-                        hover:shadow-[4px_4px_0_#000] hover:border-gray-700
-                    ">
-                        <img src="./images/mysql-icon.png" alt="mysql-icon" class="w-12 h-12">
-                        <p class="font-semibold">MySQL</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- frameworks & libraries -->
-            <div class="border border-gray-400 rounded-2xl hover:scale-105 transition mx-auto
-                    duration-500 hover:bg-gray-100 hover:bg-linear-to-b from-gray-100 to-gray-200
-                    hover:shadow-[0px_0px_8px_#000] hover:border-gray-950">
-                <h2 class="text-center text-xl pt-5 pb-5">Fraweworks & Libraries</h2>
-                <div class="grid grid-cols-2  gap-4  px-5 py-3 justify-items-center mb-5 max-w-3xl
-                        md:grid-cols-3
-                ">
-                    <div class="border border-gray-400 p-3 rounded-lg hover:bg-orange-100
-                        transition duration-500 hover:scale-105 
-                        hover:shadow-[4px_4px_0_#000] 
-                        hover:bg-linear-to-b from-blue-300 to-gray-300
-                    ">
-                        <img src="./images/react-icon.png" alt="react-icon" class="w-12 rounded-3xl">
-                        <p class="font-semibold">React</p>
-                    </div>
-                    <div class="border border-gray-400 p-2 rounded-lg 
-                        hover:bg-linear-to-b from-blue-300 to-gray-300
-                        hover:-translate-y-1 transition duration-500 hover:scale-105
-                        hover:shadow-[4px_4px_0_#000] hover:border-gray-700
-                        flex flex-col items-center
-                    ">
-                        <img src="./images/tailwind-icon.png" alt="tailwind-icon" class="w-11 h-10 
-                        rounded-2xl">
-                        <p class="font-semibold pt-3">Tailwind</p>
-                    </div>
-                    <div class="border border-gray-400 p-1 rounded-lg 
-                        hover:bg-linear-to-b from-purple-300 to-gray-300
-                        hover:-translate-y-1 transition duration-500 hover:scale-105
-                        hover:shadow-[4px_4px_0_#000] hover:border-gray-700
-                        flex flex-col items-center
-                    "> 
-                        <img src="./images/bootstrap-icon.png" alt="js-icon" class="w-13 pt-1
-                        rounded-xl">
-                        <p class="font-semibold">Bootstrap</p>
-                    </div>
-                    <div class="border border-gray-400 p-3 rounded-lg 
-                        hover:bg-linear-to-b from-green-200 to-gray-300
-                        hover:-translate-y-1 transition duration-500 hover:scale-105
-                        hover:shadow-[4px_4px_0_#000] hover:border-gray-700
-                        flex flex-col items-center
-                    ">
-                        <img src="./images/django-icon.png" alt="py icon" class="w-12 rounded-xl">
-                        <p class="font-semibold">Django</p>
-                    </div>
-                    <div class="border border-gray-400 p-3 rounded-lg 
-                        hover:bg-linear-to-b from-red-200 to-orange-200
-                        hover:-translate-y-1 transition duration-500 hover:scale-105
-                        hover:shadow-[4px_4px_0_#000] hover:border-gray-700
-                        flex flex-col items-center 
-                    ">
-                        <img src="./images/drf-icon.png" alt="mysql-icon" class="w-12">
-                        <p class="font-semibold">DRF</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- tools -->
-            <div class="border border-gray-400 rounded-2xl hover:scale-105 transition mx-auto
-                    duration-500 hover:bg-linear-to-r from-gray-100 to-gray-200 
-                    hover:border-gray-950
-                    hover:shadow-[0px_0px_8px_#000] md:col-span-2 md:justify-self-center
-                    lg:col-span-1 lg:justify-self-auto
-                    ">
-                <h2 class="text-center text-xl pt-5 pb-5">Tools i use</h2>
-                <div class="grid grid-cols-2 px-5 py-3 justify-items-center mb-5 
-                        md:grid-cols-3 gap-4
-                ">
-                    <div class="border border-gray-400 p-3 rounded-lg hover:bg-orange-200
-                         transition duration-500 hover:scale-105 
-                        hover:shadow-[4px_4px_0_#000] 
-                        hover:bg-linear-to-t from-blue-200 to-blue-400
-                        flex flex-col items-center 
-                    ">
-                        <img src="./images/vscode-icon.jpg" alt="html-icon" class="w-12 rounded-4xl">
-                        <p class="font-semibold">VsCode</p>
-                    </div>
-                    <div class="border border-gray-400 p-1.5 rounded-lg 
-                        hover:bg-linear-to-b from-orange-200 to-orange-300
-                        hover:-translate-y-1 transition duration-500 hover:scale-105
-                        hover:shadow-[4px_4px_0_#000] hover:border-gray-700
-                        flex flex-col items-center 
-                    ">
-                        <img src="./images/postman-icon.jpg" alt="css-icon" class="w-10 rounded-2xl
-                        pt-2">
-                        <p class="font-semibold pt-2">Postman</p>
-                    </div>
-                    <div class="border border-gray-400 p-3 rounded-lg 
-                        hover:bg-linear-to-b from-red-400 to-orange-200
-                        hover:-translate-y-1 transition duration-500 hover:scale-105
-                        hover:shadow-[4px_4px_0_#000] hover:border-gray-700
-                        flex flex-col items-center 
-                    "> 
-                        <img src="./images/git-icon.png" alt="js-icon" class="w-12 h-12 rounded-2xl">
-                        <p class="font-semibold">Git</p>
-                    </div>
-                    <div class="border border-gray-400 p-3 rounded-lg 
-                        hover:bg-linear-to-b from-gray-500 to-gray-300
-                        hover:-translate-y-1 transition duration-500 hover:scale-105
-                        hover:shadow-[4px_4px_0_#000] hover:border-gray-700
-                        flex flex-col items-center 
-                    ">
-                        <img src="./images/github-logo.png" alt="py icon" class="w-12 rounded-2xl">
-                        <p class="font-semibold pt-2">Github</p>
-                    </div>
-                    <div class="border border-gray-400 p-3.5 rounded-lg 
-                        hover:bg-linear-to-t from-blue-300 to-indigo-500
-                        hover:-translate-y-1 transition duration-500 hover:scale-105
-                        hover:shadow-[4px_4px_0_#000] hover:border-gray-700
-                        flex flex-col items-center gap-2 justify-center
-                    ">
-                        <img src="./images/workbench-icon.jpg" alt="mysql-icon" class="w-12 h-10
-                        rounded-sm">
-                        <p class="font-semibold leading-4">
-                            Work <span class="block p-0 ">Bench</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- certificates -->
-     <div id="certifications" class=" mt-10 flex flex-col justify-center scroll-mt-20
-                                    px-5 lg:px-4 xl:px-[8%] py-4 
-     ">
-        <h3 class="text-3xl lg:text-[40px] flex justify-center items-center gap-2">
-            Certificates
-            <img src="./images/certificates-icon.png" alt="certificates-icon" class="w-9 h-10 mt-3">
-        </h3>
-        <div class="border mx-auto px-10 py-5 leading-10 mt-8 rounded-4xl border-gray-400
-            hover:border-gray-600 hover:scale-105 transition duration-500
-            hover:bg-linear-to-t from-gray-200  to-gray-300 hover:font-semibold
-            hover:-translate-y-1 hover:shadow-[2px_2px_0_#000]">
-            <p class="flex items-center gap-2 hover:bg-gray-800 hover:text-white rounded-xl pl-1
-            hover:-translate-y-1 hover:shadow-[3px_3px_3px_gray] transition duration-400 pr-1">
-                🏅 Python Full Stack - Softlogic Instuitions - Chennai.
-            </p>
-            <p class="flex items-center gap-2 hover:bg-gray-800 hover:text-white rounded-xl pl-1
-            hover:-translate-y-1 hover:shadow-[3px_3px_3px_gray] transition duration-400 pr-1">
-                🏅 Python Course Completion - Skillrack.
-            </p>
-            <p class="flex items-center gap-2 hover:bg-gray-800 hover:text-white rounded-xl pl-1
-            hover:-translate-y-1 hover:shadow-[3px_3px_3px_gray] transition duration-400 pr-1">
-                🏅 HTML, CSS, and Javascript for Web Developers - Coursera.
-            </p>
-        </div>
-    </div>
-
-     <!-- projects -->
-    <div id="projects" class="scroll-mt-20 mt-10 px-4 md:px-8 lg:px-[4%]">
-        <h3 class=" text-3xl lg:text-[40px] mb-10 flex items-center gap-2
-        justify-center">Projects
-            <img src="./images/project-icon.png" alt="project-icon" class="w-7.5  pt-2">
-        </h3>
-        <!-- main div -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <!-- first project -->
-            <div class="border flex flex-col px-3 py-3 gap-5 border-gray-300
-                hover:border-gray-950 hover:shadow-xl shadow-black/20 hover:scale-105
-                transition duration-500 rounded-2xl
-                hover:bg-linear-to-b from-gray-100 to-gray-300">
-                <h3 class="font-semibold">Notes Management System</h3>
-                <p>
-                    A secure full-stack notes management application with user authentication 
-                    using Simple JWT, allowing users to create and delete personal notes with 
-                    persistent storage.
-                </p>
-                <div class="grid grid-cols-2 md:grid-cols-3  gap-2 items-center ">
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-blue-800 hover:bg-gray-500 hover:-translate-y-1
-                            transition duration-100 hover:text-white hover:shadow-[1px_1px_1px_#000] ">
-                        React
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-blue-800 hover:bg-gray-500 hover:-translate-y-1
-                            transition duration-100 hover:text-white hover:shadow-[1px_1px_1px_#000] ">
-                        Tailwind
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-blue-800 hover:bg-gray-500 hover:-translate-y-1
-                            transition duration-100 hover:text-white hover:shadow-[1px_1px_1px_#000] ">
-                        DRF
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-gray-500 hover:-translate-y-1
-                            transition duration-100 hover:text-white hover:shadow-[1px_1px_1px_#000] ">
-                        Python
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-blue-800 hover:bg-gray-500 hover:-translate-y-1
-                            transition duration-100 hover:text-white hover:shadow-[1px_1px_1px_#000] ">
-                        Mysql
-                    </span>
-                </div>
-                <a href="https://github.com/aravindhkrishnamoorthy/Notes-Management-System-using-React-DRF-Python-and-MySQL" 
-                    target="_blank" class="border border-gray-400 bg-gray-200 rounded-2xl py-1
-                flex justify-center hover:bg-gray-600 hover:text-white 
-                transition duration-300">
-                    GitHub
-                </a>
-        </div>
-
-
-        <!-- second book project -->
-            <div class="border flex flex-col px-3 py-3 gap-5 border-gray-300
-                hover:border-gray-950 hover:shadow-xl shadow-black/20 hover:scale-105
-                transition duration-500 rounded-2xl
-                hover:bg-linear-to-r from-gray-100 to-blue-100">
-                <h3 class="font-semibold">Book's Management System</h3>
-                <p>
-                    A web-based Book Management System that enables users to add, edit, 
-                    and delete book records through an intuitive interface with persistent data 
-                    storage.
-                </p>
-                <div class="grid grid-cols-2 md:grid-cols-3  gap-2 items-center ">
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-blue-400 hover:-translate-y-1
-                            transition duration-100 hover:text-white hover:shadow-[1px_1px_1px_#000] ">
-                        HTML
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-blue-400 hover:-translate-y-1
-                            transition duration-100 hover:text-white hover:shadow-[1px_1px_1px_#000] ">
-                        CSS
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-blue-400 hover:-translate-y-1
-                            transition duration-100 hover:text-white hover:shadow-[1px_1px_1px_#000] ">
-                        Django
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-blue-400 hover:-translate-y-1
-                            transition duration-100 hover:text-white hover:shadow-[1px_1px_1px_#000] ">
-                        Python
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-blue-400 hover:-translate-y-1
-                            transition duration-100 hover:text-white hover:shadow-[1px_1px_1px_#000] ">
-                        Mysql
-                    </span>
-                </div>
-                <a href="https://github.com/aravindhkrishnamoorthy/Book-Collection-Management-using-HTML-CSS-Python-and-Django"
-                target="_blank"  class="border border-gray-400 bg-gray-200 rounded-2xl py-1
-                flex justify-center hover:bg-gray-600 hover:text-white 
-                transition duration-300">
-                    GitHub
-                </a>
-        </div>
-
-        <!-- third portal project -->
-            <div class="border flex flex-col px-3 py-3 gap-5 border-gray-300
-                hover:border-gray-950 hover:shadow-xl shadow-black/20 hover:scale-105
-                transition duration-500 rounded-2xl
-                hover:bg-linear-to-r from-purple-200 to-gray-100">
-                <h3 class="font-semibold">Secure Authentication Portal</h3>
-                <p>
-                    A simple authentication-based portal with secure login  using Simple JWT, 
-                    built with  Django REST Framework, and Axios interceptors for authenticated 
-                    API requests.
-                </p>
-                <div class="grid grid-cols-2 md:grid-cols-3  gap-2 items-center ">
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-purple-400 hover:-translate-y-1
-                            transition duration-100 hover:text-black hover:shadow-[1px_1px_1px_#000] ">
-                        React
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-purple-400 hover:-translate-y-1
-                            transition duration-100 hover:text-black hover:shadow-[1px_1px_1px_#000] ">
-                        Tailwind
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-purple-400 hover:-translate-y-1
-                            transition duration-100 hover:text-black hover:shadow-[1px_1px_1px_#000] ">
-                        DRF
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-purple-400 hover:-translate-y-1
-                            transition duration-100 hover:text-black hover:shadow-[1px_1px_1px_#000] ">
-                        Python
-                    </span>
-                </div>
-                <a href="https://github.com/aravindhkrishnamoorthy/Secure-Authentication-Portal-using-React-TailwindCSS-DRF-and-Python"
-                target="_blank" class="border border-gray-400 bg-gray-200 rounded-2xl py-1
-                flex justify-center hover:bg-gray-600 hover:text-white 
-                transition duration-300">
-                    GitHub
-                </a>
-        </div>
-
-        <!-- fourth todo html css js project -->
-            <div class="border flex flex-col px-3 py-3 gap-5 border-gray-300
-                hover:border-gray-950 hover:shadow-xl shadow-black/20 hover:scale-105
-                transition duration-500 rounded-2xl
-                hover:bg-linear-to-br from-cyan-200 to-gray-100 ">
-                <h3 class="font-semibold">Todo List Application</h3>
-                <p>
-                    A simple todo list application that allows users to manage tasks with add
-                     and delete functionality to demonstrate user interaction, and DOM manipulation.
-                </p>
-                <div class="grid grid-cols-2 md:grid-cols-3  gap-2 items-center ">
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-cyan-300 hover:-translate-y-1
-                            transition duration-100 hover:text-gray-900 hover:shadow-[1px_1px_1px_#000] ">
-                        HTML
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-cyan-300 hover:-translate-y-1
-                            transition duration-100 hover:text-gray-900 hover:shadow-[1px_1px_1px_#000] ">
-                        CSS
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-cyan-300 hover:-translate-y-1
-                            transition duration-100 hover:text-gray-900 hover:shadow-[1px_1px_1px_#000] ">
-                        Javascript
-                    </span>
-                </div>
-                <a href="https://github.com/aravindhkrishnamoorthy/ToDo-List-Application-using-HTML-CSS-and-JS"
-                target="_blank" class="border border-gray-400 bg-gray-200 rounded-2xl py-1
-                flex justify-center hover:bg-gray-600 hover:text-white 
-                transition duration-300 ">
-                    GitHub
-                </a>
-        </div>
-
-        <!-- fifth instagram project -->
-            <div class="border flex flex-col px-3 py-3 gap-5 border-gray-300
-                hover:border-gray-950 hover:shadow-xl shadow-black/20 hover:scale-105
-                transition duration-500 rounded-2xl
-                hover:bg-linear-to-l from-yellow-100 to-gray-100">
-                <h3 class="font-semibold">Simple Instagram Clone</h3>
-                <p>
-                    A lightweight Instagram-style frontend application with basic social 
-                    feed functionality. Built using React and Tailwind CSS, with a local 
-                    JSON server to simulate backend data for simple interactions and UI behavior.
-                </p>
-                <div class="grid grid-cols-2 md:grid-cols-3  gap-2 items-center ">
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-yellow-200 hover:-translate-y-1
-                            transition duration-100 hover:text-black hover:shadow-[1px_1px_1px_#000] ">
-                        React
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-yellow-200 hover:-translate-y-1
-                            transition duration-100 hover:text-black hover:shadow-[1px_1px_1px_#000] ">
-                        Tailwind
-                    </span>
-                    
-                </div>
-                <a href="https://github.com/aravindhkrishnamoorthy/Simple-Instagram-Clone-using-React-and-TailwindCSS"
-                target="_blank" class="border border-gray-400 bg-gray-200 rounded-2xl py-1
-                flex justify-center hover:bg-gray-600 hover:text-white 
-                transition duration-300">
-                    GitHub
-                </a>
-        </div>
-
-        <!-- sixth rock paper scissor project -->
-            <div class="border flex flex-col px-3 py-3 gap-5 border-gray-300
-                hover:border-gray-950 hover:shadow-xl shadow-black/20 hover:scale-105
-                transition duration-500 rounded-2xl
-                hover:bg-linear-to-br from-green-100 to-gray-100">
-                <h3 class="font-semibold">Rock Paper Scissors Game</h3>
-                <p>
-                    A simple browser-based Rock Paper Scissors game with interactive 
-                    gameplay and autoplay functionality. Built using HTML, CSS, and JavaScript 
-                    to demonstrate core JavaScript logic, event handling, and DOM manipulation.
-                </p>
-                <div class="grid grid-cols-2 md:grid-cols-3  gap-2 items-center ">
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-green-300 hover:-translate-y-1
-                            transition duration-100 hover:text-gray-900 hover:shadow-[1px_1px_1px_#000] ">
-                        HTML
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-green-300 hover:-translate-y-1
-                            transition duration-100 hover:text-gray-900 hover:shadow-[1px_1px_1px_#000] ">
-                        CSS
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-green-300 hover:-translate-y-1
-                            transition duration-100 hover:text-gray-900 hover:shadow-[1px_1px_1px_#000] ">
-                        Javascript
-                    </span>
-                </div>
-                <a href="https://github.com/aravindhkrishnamoorthy/Rock-Paper-Scissors-using-Html-Css-and-Js"
-                target="_blank" class="border border-gray-400 bg-gray-200 rounded-2xl py-1
-                flex justify-center hover:bg-gray-600 hover:text-white 
-                transition duration-300">
-                    GitHub
-                </a>
-        </div>
-
-
-        <!-- seventh youtube project -->
-            <div class="border flex flex-col px-3 py-3 gap-5 border-gray-300
-                hover:border-gray-950 hover:shadow-xl shadow-black/20 hover:scale-105
-                transition duration-500 rounded-2xl
-                hover:bg-linear-to-bl from-red-100 to-gray-100">
-                <h3 class="font-semibold">Simple YouTube Clone</h3>
-                <p>
-                    A basic YouTube-style user interface that replicates the layout and visual 
-                    structure of the platform. Built using HTML and CSS to demonstrate responsive 
-                    design, layout structuring.
-                </p>
-                <div class="grid grid-cols-2 md:grid-cols-3  gap-2 items-center ">
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-red-200 hover:-translate-y-1
-                            transition duration-100 hover:text-gray-900 hover:shadow-[1px_1px_1px_#000] ">
-                        HTML
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-red-200 hover:-translate-y-1
-                            transition duration-100 hover:text-gray-900 hover:shadow-[1px_1px_1px_#000] ">
-                        CSS
-                    </span>
-                </div>
-                <a href="https://github.com/aravindhkrishnamoorthy/Youtube-Clone-using-HTML-and-CSS" 
-                target="_blank" class="border border-gray-400 bg-gray-200 rounded-2xl py-1
-                flex justify-center hover:bg-gray-600 hover:text-white 
-                transition duration-300">
-                    GitHub
-                </a>
-        </div>
-        
-
-        <!-- eigth guess a number project -->
-            <div class="border flex flex-col px-3 py-3 gap-5 border-gray-300
-                hover:border-gray-950 hover:shadow-xl shadow-black/20 hover:scale-105
-                transition duration-500 rounded-2xl
-                hover:bg-linear-to-br from-violet-200 to-gray-100">
-                <h3 class="font-semibold">Guess the Number Game</h3>
-                <p>
-                    A simple interactive number guessing game where users guess a randomly 
-                    generated number between 1 and 20 with a top score tracking feature to demonstrate 
-                    DOM manipulation.
-                </p>
-                <div class="grid grid-cols-2 md:grid-cols-3  gap-2 items-center ">
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-violet-300 hover:-translate-y-1
-                            transition duration-100 hover:text-gray-900 hover:shadow-[1px_1px_1px_#000] ">
-                        HTML
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-violet-300 hover:-translate-y-1
-                            transition duration-100 hover:text-gray-900 hover:shadow-[1px_1px_1px_#000] ">
-                        CSS
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-violet-300 hover:-translate-y-1
-                            transition duration-100 hover:text-gray-900 hover:shadow-[1px_1px_1px_#000] ">
-                        Javascript
-                    </span>
-                </div>
-                <a href="https://github.com/aravindhkrishnamoorthy/Guess-the-Number-Game-using-HTML-CSS-and-JS"
-                target="_blank" class="border border-gray-400 bg-gray-200 rounded-2xl py-1
-                flex justify-center hover:bg-gray-600 hover:text-white 
-                transition duration-300">
-                    GitHub
-                </a>
-        </div>
-
-        <!-- ninth personal porfolio project -->
-            <div class="border flex flex-col px-3 py-3 gap-5 border-gray-300
-                hover:border-gray-950 hover:shadow-xl shadow-black/20 hover:scale-105
-                transition duration-500 rounded-2xl
-                hover:bg-linear-to-br from-indigo-200 to-gray-100">
-                <h3 class="font-semibold">Personal Portfolio Website</h3>
-                <p>
-                    A personal portfolio website built using HTML and Tailwind CSS to 
-                    showcase projects, skills, and professional details with a responsive 
-                    and modern design.
-                </p>
-                <div class="grid grid-cols-2 md:grid-cols-3  gap-2 items-center ">
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-indigo-300 hover:-translate-y-1
-                            transition duration-100 hover:text-gray-900 hover:shadow-[1px_1px_1px_#000] ">
-                        HTML
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-indigo-300 hover:-translate-y-1
-                            transition duration-100 hover:text-gray-900 hover:shadow-[1px_1px_1px_#000] ">
-                        Tailwind
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-indigo-300 hover:-translate-y-1
-                            transition duration-100 hover:text-gray-900 hover:shadow-[1px_1px_1px_#000] ">
-                        JavaScript
-                    </span>
-                </div>
-                <a href="https://github.com/aravindhkrishnamoorthy/Personal-Portfolio-using-Html-TailwindCSS-and-JS"
-                target="_blank" class="border border-gray-400 bg-gray-200 rounded-2xl py-1
-                flex justify-center hover:bg-gray-600 hover:text-white 
-                transition duration-300">
-                    GitHub
-                </a>
-        </div>
-
-
-        <!-- tenth todo django project -->
-            <div class="border flex flex-col px-3 py-3 gap-5 border-gray-300
-                hover:border-gray-950 hover:shadow-xl shadow-black/20 hover:scale-105
-                transition duration-500 rounded-2xl
-                hover:bg-linear-to-b from-teal-200 to-gray-100">
-                <h3 class="font-semibold">Todo List Management Application</h3>
-                <p>
-                    A simple web-based todo list application that allows users to add, 
-                    edit, delete, and manage tasks with mark-as-done and undo functionality.
-                </p>
-                <div class="grid grid-cols-2 md:grid-cols-3  gap-2 items-center ">
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-teal-300 hover:-translate-y-1
-                            transition duration-100 hover:text-black hover:shadow-[1px_1px_1px_#000] ">
-                        HTML
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-teal-300 hover:-translate-y-1
-                            transition duration-100 hover:text-black hover:shadow-[1px_1px_1px_#000] ">
-                        Bootstrap
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-teal-300 hover:-translate-y-1
-                            transition duration-100 hover:text-black hover:shadow-[1px_1px_1px_#000] ">
-                        Django
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-teal-300 hover:-translate-y-1
-                            transition duration-100 hover:text-black hover:shadow-[1px_1px_1px_#000] ">
-                        Python
-                    </span>
-                </div>
-                <a href="https://github.com/aravindhkrishnamoorthy/ToDo-List-using-HTML-CSS-Bootstrap-Python-and-Django"
-                target="_blank" class="border border-gray-400 bg-gray-200 rounded-2xl py-1
-                flex justify-center hover:bg-gray-600 hover:text-white 
-                transition duration-300">
-                    GitHub
-                </a>
-        </div>
-
-
-        <!-- eleventh blog website html bootstrap django python project -->
-            <div class="border flex flex-col px-3 py-3 gap-5 border-gray-300
-                hover:border-gray-950 hover:shadow-xl shadow-black/20 hover:scale-105
-                transition duration-500 rounded-2xl
-                hover:bg-linear-to-l from-yellow-100 to-gray-100">
-                <h3 class="font-semibold">Blog Webiste</h3>
-                <p>
-                    A full-stack blog application where authorized members can create and publish posts while 
-                    viewers can browse articles across multiple categories. Registered users can comment on posts.
-                </p>
-                <div class="grid grid-cols-2 md:grid-cols-3  gap-2 items-center ">
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-yellow-200 hover:-translate-y-1
-                            transition duration-100 hover:text-black hover:shadow-[1px_1px_1px_#000] ">
-                        HTML
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-yellow-200 hover:-translate-y-1
-                            transition duration-100 hover:text-black hover:shadow-[1px_1px_1px_#000] ">
-                        Bootstrap
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-yellow-200 hover:-translate-y-1
-                            transition duration-100 hover:text-black hover:shadow-[1px_1px_1px_#000] ">
-                        Django
-                    </span>
-                    <span class="border border-gray-400 bg-gray-100 rounded-2xl  text-center
-                            hover:border-black hover:bg-yellow-200 hover:-translate-y-1
-                            transition duration-100 hover:text-black hover:shadow-[1px_1px_1px_#000] ">
-                        Python
-                    </span>
-                </div>
-                <a href="https://github.com/aravindhkrishnamoorthy/Blog-Website-using-HTML-Bootstrap-Django-Python-and-MySQL"
-                target="_blan" class="border border-gray-400 bg-gray-200 rounded-2xl py-1
-                flex justify-center hover:bg-gray-600 hover:text-white 
-                transition duration-300  ">
-                    GitHub
-                </a>
-        </div>
-
-    </div>
-
- 
-    <footer class="mt-15 text-center text-gray-500">
-        @Aravindh K - Full Stack Developer
-    </footer>
-      
+  </footer>
+  <script src="./script.js" defer></script>
 </body>
-<script src="script.js"></script> 
-</html>    
+</html>

@@ -1,1 +1,115 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+@source "./index.html";
+
+/* ---------- Design tokens ---------- */
+:root {
+  --bg: #f5f6f3;
+  --surface: #ffffff;
+  --surface-2: #e9ede7;
+  --fg: #17201b;
+  --muted: #55615a;
+  --line: #d5dbd4;
+  --accent: #1a6a4e;
+  --accent-soft: #dcefe5;
+  --on-accent: #ffffff;
+  --warn: #9a5206;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #0e1311;
+  --surface: #151c19;
+  --surface-2: #1f2925;
+  --fg: #e5ebe7;
+  --muted: #9caaa2;
+  --line: #2b3731;
+  --accent: #4cc495;
+  --accent-soft: #183528;
+  --on-accent: #06130d;
+  --warn: #f0b35a;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: #0e1311;
+    --surface: #151c19;
+    --surface-2: #1f2925;
+    --fg: #e5ebe7;
+    --muted: #9caaa2;
+    --line: #2b3731;
+    --accent: #4cc495;
+    --accent-soft: #183528;
+    --on-accent: #06130d;
+    --warn: #f0b35a;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+  --color-warn: var(--warn);
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body { @apply bg-bg font-sans text-base leading-relaxed text-fg antialiased; }
+  h1, h2, h3 { @apply font-display leading-tight font-semibold tracking-tight text-balance; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  button { cursor: pointer; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, ::before, ::after { transition: none !important; }
+  }
+}
+
+/* ---------- Shared components ---------- */
+@layer components {
+  .shell { @apply mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-12; }
+  .section { @apply border-t border-line py-9 md:py-12 lg:py-16; }
+  .section-title { @apply text-2xl lg:text-3xl; }
+  .btn {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-line bg-surface
+      px-5 text-sm font-semibold transition-colors hover:border-accent hover:text-accent;
+  }
+  .btn-primary { @apply border-accent bg-accent text-on-accent hover:bg-fg hover:border-fg hover:text-bg; }
+  .icon-btn {
+    @apply grid size-11 place-items-center rounded-lg border border-line bg-surface transition-colors
+      hover:border-accent hover:text-accent;
+  }
+  .icon { width: 1.25rem; height: 1.25rem; }
+  .card { @apply rounded-2xl border border-line bg-surface; }
+  .tag { @apply rounded-md bg-surface-2 px-2 py-0.5 font-mono text-xs; }
+  .skill { @apply rounded-lg border border-line bg-surface px-3 py-1.5 text-sm font-medium; }
+  .label { @apply font-mono text-xs font-medium tracking-wider text-muted uppercase; }
+  .nav-link { @apply inline-flex min-h-11 items-center border-b-2 border-transparent text-sm font-medium text-muted transition-colors hover:text-fg; }
+  .nav-link[aria-current="true"] { @apply border-accent text-fg; }
+  .sheet-link { @apply flex min-h-12 items-center border-b border-line font-medium; }
+  .text-link { @apply inline-flex min-h-11 shrink-0 items-center font-semibold text-accent underline-offset-4 hover:underline; }
+
+  .project-list { @apply grid overflow-hidden lg:grid-cols-2; }
+  .project-list li { @apply flex items-center justify-between gap-4 border-b border-line px-4 py-1.5 sm:px-5 sm:py-2.5; }
+  .project-list li > div { @apply min-w-0; }
+  .project-list li:last-child { @apply border-b-0; }
+  @media (min-width: 64rem) {
+    .project-list li:nth-child(odd) { @apply border-r; }
+    .project-list li:nth-last-child(2) { @apply border-b-0; }
+  }
+
+  /* request trace shown on featured projects */
+  .trace { @apply grid gap-2 border-b border-line bg-surface-2 p-4 font-mono sm:p-5 text-[13px] leading-snug; }
+  .trace li { @apply grid grid-cols-[1fr_auto] gap-x-3; }
+  .trace b { @apply font-medium text-accent; }
+  .trace .bad { @apply font-medium text-warn; }
+  .trace small { @apply col-span-2 text-xs text-muted; }
+  .trace code { @apply min-w-0 break-words; }
+}
