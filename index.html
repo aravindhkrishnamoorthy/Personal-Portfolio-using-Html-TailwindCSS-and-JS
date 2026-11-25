@@ -40,6 +40,7 @@
     "jobTitle": "Python Full Stack Developer",
     "url": "https://aravindhkrishnamoorthy.github.io/Personal-Portfolio-using-Html-TailwindCSS-and-JS/",
     "sameAs": ["https://github.com/aravindhkrishnamoorthy", "https://www.linkedin.com/in/aravindhkjk/"],
+    "address": {"@type": "PostalAddress", "addressLocality": "Chennai", "addressCountry": "IN"},
     "alumniOf": "Sri Sairam Engineering College",
     "knowsAbout": ["Python", "Django", "Django REST Framework", "React", "MySQL"]
   }
@@ -74,7 +75,7 @@
         </button>
       </div>
     </div>
-    <nav id="mobileMenu" aria-label="Mobile" class="absolute inset-x-0 top-full border-b border-line bg-surface shadow-lg md:hidden" hidden>
+    <nav id="mobileMenu" aria-label="Mobile" class="absolute inset-x-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-line bg-surface shadow-lg md:hidden" hidden>
       <div class="shell pb-4">
         <a class="sheet-link" href="#projects">Projects</a>
         <a class="sheet-link" href="#skills">Skills</a>
@@ -88,11 +89,11 @@
   <main id="main" tabindex="-1" class="outline-none">
     <section id="top" aria-labelledby="hero-title" class="py-8 md:py-16 lg:py-20">
       <div class="shell grid grid-cols-[auto_1fr] gap-5 lg:grid-cols-[1.5fr_1fr] lg:gap-x-14">
-        <img src="./assets/aravindh-k.webp" alt="Portrait of Aravindh K" width="336" height="420" fetchpriority="high" class="h-auto w-20 rounded-2xl border border-line md:w-28 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:w-full lg:max-w-[336px] lg:justify-self-end lg:rounded-3xl">
+        <img src="./assets/aravindh-k.webp" alt="Portrait of Aravindh K" width="276" height="345" fetchpriority="high" class="h-auto w-20 rounded-2xl border border-line md:w-28 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:w-full lg:max-w-[276px] lg:justify-self-end lg:rounded-3xl">
         <p class="self-center font-medium text-muted lg:col-start-1 lg:row-start-1 lg:self-end">Aravindh K<br class="lg:hidden"><span class="max-lg:hidden">, </span>Python full stack developer</p>
         <div class="col-span-2 grid gap-5 lg:col-span-1 lg:col-start-1 lg:row-start-2 lg:self-start">
           <h1 id="hero-title" class="text-[2rem] md:text-5xl lg:text-[3.25rem]">I build <span class="text-accent">Django REST APIs</span> and the React apps that use them.</h1>
-          <p class="max-w-[58ch] text-lg text-muted">I'm a B.Tech IT graduate looking for an entry-level developer role. My projects cover JWT authentication, per-user data access and MySQL-backed apps.</p>
+          <p class="max-w-[58ch] text-lg text-muted">I'm a B.Tech IT graduate looking for an entry-level developer role. My projects cover JWT authentication, per-user data access and MySQL-backed apps. I'm based in Chennai and open to relocating anywhere.</p>
           <div class="flex flex-wrap gap-3">
             <a href="#projects" class="btn btn-primary">See my projects</a>
             <a href="./assets/aravindh-k-resume.pdf" target="_blank" rel="noopener" class="btn">Resume (PDF)</a>
@@ -124,7 +125,7 @@
               <h3 class="text-xl">Notes Management System</h3>
               <p class="text-muted">A private notes app. Users register, sign in, and create, read and delete notes that other users can't see.</p>
               <ul class="grid list-disc gap-1.5 pl-5 text-[15px]">
-                <li>The server filters notes by the signed-in user, so requesting another person's note ID returns nothing</li>
+                <li>The server filters notes by the signed-in user, so trying to delete another person's note returns a 404</li>
                 <li>Protected React routes check token expiry and request a new token before rendering</li>
                 <li>Django REST Framework API with a MySQL database</li>
               </ul>
@@ -203,7 +204,7 @@
       <div class="shell">
         <div class="card grid gap-5 p-6 md:p-10">
           <h2 id="contact-title" class="section-title">Hiring for an entry-level role?</h2>
-          <p class="max-w-[58ch] text-muted">Email is the best way to reach me.</p>
+          <p class="max-w-[58ch] text-muted">Email is the best way to reach me. I'm in Chennai and can relocate to any location.</p>
           <div class="flex flex-wrap items-center gap-3">
             <a id="email" href="mailto:aravindhjk2001@gmail.com" class="text-link font-mono !font-medium break-all">aravindhjk2001@gmail.com</a>
             <button id="copyEmail" type="button" class="btn" hidden>Copy email</button>

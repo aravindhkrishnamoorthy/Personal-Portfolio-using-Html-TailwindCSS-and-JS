@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/Personal-Portfolio-using-Html-TailwindCSS-and-JS/">
+  <title>Page not found | Aravindh K</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./output.css">
+  <script>
+    // The resume moved. Send anyone using its old address to the new file.
+    if (decodeURIComponent(location.pathname).endsWith("/images/ARAVINDH K_Resume.pdf")) {
+      location.replace(new URL("./assets/aravindh-k-resume.pdf", document.baseURI));
+    }
+    try {
+      const saved = localStorage.getItem("theme");
+      if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
+    } catch {}
+  </script>
+</head>
+<body>
+  <main class="shell grid min-h-dvh content-center gap-5 py-12">
+    <p class="label">Error 404</p>
+    <h1 class="text-[2rem] md:text-5xl">This page doesn't exist.</h1>
+    <p class="max-w-[58ch] text-lg text-muted">The link may be old or mistyped.</p>
+    <div class="flex flex-wrap gap-3">
+      <a class="btn btn-primary" href="./">Go to my portfolio</a>
+      <a class="btn" href="./assets/aravindh-k-resume.pdf">Resume (PDF)</a>
+    </div>
+  </main>
+</body>
+</html>

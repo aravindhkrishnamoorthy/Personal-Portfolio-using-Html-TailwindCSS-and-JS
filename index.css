@@ -1,5 +1,6 @@
 @import "tailwindcss" source(none);
 @source "./index.html";
+@source "./404.html";
 
 /* ---------- Design tokens ---------- */
 :root {
@@ -70,6 +71,16 @@
     html { scroll-behavior: auto; }
     *, ::before, ::after { transition: none !important; }
   }
+}
+
+@media print {
+  :root, :root[data-theme="dark"], :root:not([data-theme]) {
+    --bg: #fff; --surface: #fff; --surface-2: #f2f2f2; --fg: #000; --muted: #444;
+    --line: #bbb; --accent: #1a6a4e; --on-accent: #000; color-scheme: light;
+  }
+  body > header nav, #themeToggle, #menuToggle, #copyEmail { display: none !important; }
+  body > header { position: static !important; }
+  article, .project-list li { break-inside: avoid; }
 }
 
 /* ---------- Shared components ---------- */

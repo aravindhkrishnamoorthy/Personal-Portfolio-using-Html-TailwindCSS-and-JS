@@ -43,6 +43,9 @@ document.addEventListener("keydown", (e) => {
 document.addEventListener("click", (e) => {
   if (!menu.hidden && !e.target.closest("header")) setMenu(false);
 });
+menu.addEventListener("focusout", (e) => {
+  if (e.relatedTarget && !e.relatedTarget.closest("header")) setMenu(false);
+});
 matchMedia("(min-width: 48rem)").addEventListener("change", () => setMenu(false));
 
 /* ---------- Highlight the current section ---------- */
